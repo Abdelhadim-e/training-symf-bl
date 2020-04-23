@@ -28,8 +28,16 @@ class BlogController extends AbstractController
      **/
     public function home(){
         return $this->render('blog/home.html.twig', [
-            'title' => "Bienvenue la famille"
+            'title' => "Bienvenue sur le blog en Symfony"
         ]);
+    }
+
+    /**
+     * @Route("/blog/new", name="blog_create")
+     */
+
+    public function create(){
+        return $this->render('blog/create.html.twig');
     }
 
     /**
@@ -44,5 +52,6 @@ class BlogController extends AbstractController
             'article' => $article
         ]);
     }
+
     
 }
